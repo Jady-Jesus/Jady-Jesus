@@ -7,7 +7,7 @@ Olá! Sou uma profissional apaixonada por **Customer Experience (CX)** e anális
 - 📡 **Comunicação eficiente com stakeholders internos e externos.**  
 
 Minha trajetória inclui:  
-- 🛠️ Supervisão de processos e desenvolvimento de estratégias.  
+- 🛠Supervisão de processos e desenvolvimento de estratégias.  
 - 🌐 Vivência em diversos canais de atendimento, como **Zendesk** (chat, e-mail, WhatsApp e voz).  
 - 🚀 Proposição de melhorias e otimização de fluxos internos.  
 
