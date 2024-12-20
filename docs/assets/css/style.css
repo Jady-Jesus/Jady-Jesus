@@ -365,7 +365,31 @@ header .grid-layout nav .nav-list li a:hover {
 	background-size: cover;
 	border-radius: 4px;
 	height: 490px
+	
+
 }
+#s-about .grid-layout>div #creator-photo {
+    margin-bottom: 24px; /* Espaçamento entre a imagem e o texto */
+}
+
+#s-about .grid-layout>div div:nth-child(2) p {
+    margin-top: 16px; /* Espaçamento extra acima do texto, se necessário */
+    font-size: 1.8rem; /* Tamanho consistente do texto */
+    line-height: 180%; /* Mantém boa legibilidade */
+	padding-left: 25px;
+}
+
+
+@media screen and (min-height: 600px) {
+    #s-about .grid-layout>div #creator-photo {
+        background-size: cover; /* A imagem ainda preenche o contêiner */
+        background-position: top center; /* Garante que o topo da imagem seja visível */
+        background-repeat: no-repeat; /* Evita repetição */
+        height: 500px; /* Altura fixa para manter proporções */
+        width: 50%; /* Ocupa a largura disponível */
+    }
+}
+
 
 @media screen and (max-width: 1200px) {
 	#s-about .grid-layout>div #creator-photo {
@@ -397,6 +421,27 @@ header .grid-layout nav .nav-list li a:hover {
 	font-weight: 500;
 	margin: 16px
 }
+@media screen and (max-width: 500px) {
+    #s-about .grid-layout>div #creator-photo h3 {
+        font-size: 1rem; /* Reduz ainda mais o tamanho da fonte */
+        width: 120px; /* Reduz a largura do quadro */
+        padding: 4px; /* Reduz o preenchimento interno */
+		margin: 8px 0 8px 12px; /* Margem ainda maior na esquerda */
+
+
+    }
+}
+@media screen and (max-width: 768px) {
+    #s-about .grid-layout>div #creator-photo h3 {
+        font-size: 1.2rem; /* Ajusta o tamanho da fonte */
+        width: 140px; /* Ajusta a largura do quadro */
+        padding: 6px; /* Ajusta o preenchimento interno */
+        margin: 12px 0 12px 16px; /* Margem maior na esquerda */
+		
+    }
+}
+
+
 
 #s-about .grid-layout>div div:nth-child(2) {
 	width: 49%
@@ -409,11 +454,18 @@ header .grid-layout nav .nav-list li a:hover {
 }
 
 #s-about .grid-layout>div div:nth-child(2) h2 {
+	text-align: center;
 	font-size: 4rem;
 	font-weight: 500;
 	margin: 16px 0px;
 	color: #000000
+	
 }
+#s-about .grid-layout>div div:nth-child(2) h2:hover {
+    color:#5d0088; /* Cor que o texto assume ao passar o mouse */
+    transition: color 0.3s ease; /* Transição suave para melhorar a experiência */
+}
+
 
 @media screen and (max-width: 992px) {
 	#s-about .grid-layout>div div:nth-child(2) h2 {
@@ -429,17 +481,57 @@ header .grid-layout nav .nav-list li a:hover {
 }
 
 #s-about .grid-layout>div div:nth-child(2) h4 {
+	text-align: center;
 	font-size: 2rem;
 	font-weight: 500;
-	color: #986dff
+	color: #721675
 }
+#translate-button {
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem; /* Ajusta o tamanho do texto */
+  color: #000; /* Cor inicial */
+  text-decoration: none; /* Remove sublinhado */
+  transition: color 0.3s ease, transform 0.2s ease; /* Transições suaves */
+}
+
+#translate-button img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#translate-button:hover {
+  color: #ff6d80; /* Altera a cor ao passar o mouse */
+  transform: scale(1.05); /* Aumenta levemente o botão */
+}
+
 
 #s-about .grid-layout>div div:nth-child(2) p {
 	font-size: 1.8rem;
-	color: #9ca3af;
+	color: #986dff;
 	line-height: 160%;
 	margin: 32px 0px 48px 0px
 }
+#s-about .grid-layout>div div:nth-child(2) p {
+    margin-top: 16px; /* Adiciona um pequeno espaçamento acima do texto */
+    font-size: 1.9rem; /* Mantém o tamanho legível */
+    line-height: 160%; /* Mantém a leitura confortável */
+}
+
+@media screen and (max-width: 768px) {
+    #s-about .grid-layout>div div:nth-child(2) p {
+        margin-top: 12px; /* Reduz o espaçamento em telas menores */
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #s-about .grid-layout>div div:nth-child(2) p {
+        margin-top: 10px; /* Espaçamento menor para telas muito pequenas */
+    }
+}
+
+
+
 
 #s-about .grid-layout>div div:nth-child(2) nav ul {
 	display: flex;
@@ -500,7 +592,7 @@ h2 {
 }
 
 h2:hover {
-	border-bottom: 2px solid #cf0000;
+	border-bottom: 2px solid #000000;
 	/* Adiciona um sublinhado colorido */
 	color: #ff6d80;
 	/* Altera a cor do texto ao passar o mouse */

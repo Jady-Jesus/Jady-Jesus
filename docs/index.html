@@ -46,19 +46,18 @@
         <nav>
           <img
             src="assets/image/logonovo.png"
-            alt="iuricode"
+            alt=""
             width="150px"
             height="25px"
           />
-          <div class="mobile-menu">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-          </div>
           <ul class="nav-list">
-            <li><a href="https://iuricode-blog.vercel.app/" rel="noopener" target="_blank">Blog</a></li>
-            <li><a href="https://iuricode-blog.vercel.app/setup" rel="noopener" target="_blank">Setup</a></li>
-            <li><a href="https://iuricode.com/efront/" rel="noopener" target="_blank">eBook</a></li>
+            <li><a href="#" rel="noopener" target="_blank">Blog</a></li>
+			<li>
+				<a id="translate-button" href="#">
+				  <img src="assets/icons/logousa.png" alt="USA Flag" style="width: 20px; margin-right: 8px;">
+				  Translate to English
+				</a>
+			  </li>            <li><a href="#" rel="noopener" target="_blank">eBook</a></li>
           </ul>
         </nav>
       </div>
@@ -68,15 +67,12 @@
         <div class="grid-layout">
           <div>
             <div id="creator-photo" class="delayMediumReveal">
-              <h3 class="delayExtraBigReveal"> Supervisor
+              <h3 class="delayExtraBigReveal"> Supervisora
 			</h3>
             </div>
             <div>
               <h4 class="delayMediumReveal">Quem sou eu?</h4>
               <h2 class="delaySmallReveal">Jady Jesus</h2>
-              <h3 class="delayMediumReveal">
-                Desenvolvedora-Frond-End
-              </h3>
               <p class="delayLargeReveal">
                 Vivência em suporte ao cliente em diferentes canais de atendimento, amplo conhecimento em tratativas através do Zendesk via chat, e-mail, WhatsApp e canal de voz.
 Experiência em resolução de problemas com ownership, senso crítico e senso de urgência, reportando as equipes complementares possíveis erros e falhas nos processos internos.
@@ -144,12 +140,12 @@ Acompanhamento das métricas solicitadas pela empresa (KPIs, CSAT, Wrap-Up).
                       /></li
                   ></a>
                   <a
-                    href="#"
+                    href="https://www.behance.net/iuricode"
                     rel="noopener"
                     target="_blank"
                     ><li>
                       <img
-                        src="./assets/icons/behance.png"
+                        src="./assets/icons/behance.svg"
                         alt="Ícone do Behance"
                       /></li
                   ></a>
@@ -173,7 +169,7 @@ Acompanhamento das métricas solicitadas pela empresa (KPIs, CSAT, Wrap-Up).
                 profissional que vão destacar seu produto no mercado.
               </p>
               <a
-                href="https://www.linkedin.com/in/jady-jesus/"
+                href="https://iuricode.com/efront/"
                 rel="noopener"
                 target="_blank"
                 class="delayExtraBigReveal"
@@ -205,5 +201,57 @@ Acompanhamento das métricas solicitadas pela empresa (KPIs, CSAT, Wrap-Up).
 
     <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
     <script type="module" src="assets/js/main.js"></script>
+	<script>
+		document.getElementById('translate-button').addEventListener('click', function (e) {
+		  e.preventDefault();
+	  
+		  // Dicionário de traduções
+		  const translations = {
+			'Vivência em suporte ao cliente em diferentes canais de atendimento, amplo conhecimento em tratativas através do Zendesk via chat, e-mail, WhatsApp e canal de voz. Experiência em resolução de problemas com ownership, senso crítico e senso de urgência, reportando as equipes complementares possíveis erros e falhas nos processos internos. Acompanhamento das métricas solicitadas pela empresa (KPIs, CSAT, Wrap-Up).':
+			  'Experience in customer support across different communication channels, extensive knowledge in handling Zendesk via chat, email, WhatsApp, and voice channel. Experience in problem-solving with ownership, critical thinking, and urgency, reporting possible errors and internal process failures to complementary teams. Monitoring metrics requested by the company (KPIs, CSAT, Wrap-Up).',
+	  
+			'Ajudando empresas a construírem produtos digitais de forma moderna e de alta qualidade.':
+			  'Helping companies build digital products in a modern and high-quality way.',
+	  
+			'Quem sou eu?': 'Who am I?',
+			'Jady Jesus': 'Jady Jesus',
+			'Supervisora': 'Supervisor',
+			'Baixar-Curriculo': 'Download Resume',
+			'Uma mistura de Design, Desenvolvimento Frontend e habilidade profissional que vão destacar seu produto no mercado.':
+			  'A mix of Design, Frontend Development, and professional skills to make your product stand out in the market.'
+		  };
+	  
+		  // Função para traduzir o texto de um elemento
+		  function translateElementText(element) {
+			const originalText = element.textContent.trim().replace(/\s+/g, ' ');
+			if (translations[originalText]) {
+			  element.textContent = translations[originalText];
+			}
+		  }
+	  
+		  // Seleciona todos os elementos relevantes
+		  document.querySelectorAll('h1, h2, h3, h4, p, a, span').forEach((element) => {
+			translateElementText(element);
+		  });
+	  
+		  alert('Página traduzida para o inglês!');
+		});
+	  </script>
+	  <script>
+		document.addEventListener('DOMContentLoaded', function () {
+		  const mobileMenuButton = document.querySelector('.mobile-menu');
+		  const navList = document.querySelector('.nav-list');
+	  
+		  // Alterna a visibilidade do menu
+		  mobileMenuButton.addEventListener('click', function () {
+			navList.classList.toggle('active');
+			mobileMenuButton.classList.toggle('active');
+		  });
+		});
+	  </script>
+	  
+	  
+
+	
   </body>
 </html>
